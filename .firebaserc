@@ -1,0 +1,14 @@
+{
+    "projects": {
+        "staging": "zajno-dev"
+    },
+    "targets": {
+        "zajno-dev": {
+            "hosting": {
+                "web-stage": [
+                    "nextjs-template-test"
+                ]
+            }
+        }
+    }
+}

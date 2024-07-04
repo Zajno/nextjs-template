@@ -2,7 +2,10 @@
 
 const nextConfig = {
     output: 'export',
-    distDir: 'dist'
+    distDir: 'dist',
+    sassOptions: {
+        additionalData: "@import './src/styles/common/gem.scss'\r\n",
+    }
 };
 
 export default nextConfig;

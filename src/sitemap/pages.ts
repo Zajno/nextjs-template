@@ -10,11 +10,6 @@ export enum PagesRoutes {
     NoScript = '/no-script'
 }
 
-export const BaseMeta = {
-    Title: 'Explicit Promotions',
-    Description: 'The world\'s largest 100% organic promotion service. Elevate your music with real fans, real streams, and a real team. Your journey to the top starts here.',
-};
-
 export const HomePage: SitePage<HomeCopyrightShape> = {
     id: 'home',
     href: PagesRoutes.Home,

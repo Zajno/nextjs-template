@@ -1,7 +1,11 @@
 import { Righteous } from 'next/font/google';
 import '../styles/base.sass';
 
-const righteous = Righteous({ weight: ['400'], subsets: ['latin'] });
+const righteous = Righteous({
+    weight: ['400'],
+    subsets: ['latin'],
+    variable: '--main-font',
+});
 
 export default function RootLayout({
     children,
@@ -10,7 +14,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={righteous.className}>
+            <body className={righteous.variable}>
                 {children}
             </body>
         </html>

@@ -5,6 +5,9 @@ const nextConfig = {
     distDir: 'dist',
     sassOptions: {
         additionalData: "@import './src/styles/common/gem.scss'\r\n",
+    },
+    env: {
+        APP_ENV: process.env.APP_ENV,
     }
 };
 

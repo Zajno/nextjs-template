@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy:staging": "firebase -P staging deploy --only hosting:web-stage"
+    "build:staging": "pnpm i && (cross-env APP_ENV=staging pnpm build)",
+    "build:production": "pnpm i && (cross-env APP_ENV=production pnpm build)",
+    "deploy:staging": "firebase -P staging deploy --only hosting:web-stage",
+    "deploy:production": "firebase -P production deploy --only hosting:web-prod"
   },
   "dependencies": {
     "next": "14.2.4",
@@ -19,8 +22,10 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@zajno/eslint-config": "^3.0.2",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
+    "git-rev-sync": "^3.0.2",
     "sass": "^1.77.6",
     "typescript": "^5"
   }

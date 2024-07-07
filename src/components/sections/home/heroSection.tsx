@@ -1,6 +1,6 @@
 import './style.sass';
 import React from 'react';
- 
+
 type SectionCopyright = {
     title: string,
     subtitle: string,
@@ -18,7 +18,7 @@ export const HeroSection = ({ id, copyright }: Props) => {
                 <h1 className="title-h1">
                     {copyright.title}
                 </h1>
-                
+
                 <h2 className="title-h2">
                     {copyright.subtitle}
                 </h2>

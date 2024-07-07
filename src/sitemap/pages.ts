@@ -31,7 +31,7 @@ export const Page404: SitePage = {
     href: PagesRoutes.Error404,
     title: 'Page Not Found',
     description: '',
-    copy: undefined,
+    copy: undefined as any,
     disableScripts: true,
 };
 
@@ -40,7 +40,7 @@ export const NotSupported: SitePage = {
     href: PagesRoutes.NotSupported,
     title: '',
     description: '',
-    copy: undefined,
+    copy: undefined as any,
     disableScripts: true,
 };
 
@@ -49,7 +49,7 @@ export const NoScript: SitePage = {
     href: PagesRoutes.NoScript,
     title: 'Enable JavaScript',
     description: 'This website requires scripts to be enabled/allowed in your browser.',
-    copy: undefined,
+    copy: undefined as any,
     noIndex: true,
     disableScripts: 'force',
 };

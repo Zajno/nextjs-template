@@ -3,6 +3,15 @@
         "next/core-web-vitals",
         "@zajno/eslint-config"
     ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": ["tsconfig.json"],
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
     "rules": {
         "indent": [
             "warn",
@@ -11,11 +20,5 @@
                 "SwitchCase": 1
             }
         ]
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "project": ["tsconfig.json"],
-        "ecmaVersion": "latest",
-        "sourceType": "module"
     }
 }

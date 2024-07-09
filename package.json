@@ -10,13 +10,16 @@
     "build:staging": "pnpm i && (cross-env APP_ENV=staging pnpm build)",
     "build:production": "pnpm i && (cross-env APP_ENV=production pnpm build)",
     "deploy:staging": "firebase -P staging deploy --only hosting:web-stage",
-    "deploy:production": "firebase -P production deploy --only hosting:web-prod"
+    "deploy:production": "firebase -P production deploy --only hosting:web-prod",
+    "emulate": "firebase emulators:start --only hosting"
   },
   "dependencies": {
     "next": "14.2.4",
-    "next-image-export-optimizer": "^1.14.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "@zajno/common": "^2.3.12",
+    "@zajno/common-web": "^1.0.5",
+    "gsap": "npm:@gsap/shockingly"
   },
   "devDependencies": {
     "@types/node": "^20",

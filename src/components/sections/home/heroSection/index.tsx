@@ -1,3 +1,6 @@
+'use client';
+
+import { useGem } from '@/services/breakpoints';
 import './style.sass';
 import React from 'react';
 
@@ -12,6 +15,7 @@ type Props = {
 };
 
 export const HeroSection = ({ id, copyright }: Props) => {
+    const gem = useGem();
     return (
         <section className="hero-section" id={id}>
             <div className="container">
@@ -20,7 +24,7 @@ export const HeroSection = ({ id, copyright }: Props) => {
                 </h1>
 
                 <h2 className="title-h2">
-                    {copyright.subtitle}
+                    {`current gem: ${gem}`}
                 </h2>
             </div>
         </section>

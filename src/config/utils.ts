@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 const appHash = process.env.APP_HASH || git.short(__dirname);
 const appEnv = process.env.APP_ENV || process.env.NODE_ENV || DefaultEnvironment;
 
-export const requiredEnv = {
+export const AppConfig = {
     APP_ENV: appEnv,
     APP_HASH: appHash,
     APP_URL: CurrentConfig.Hostname,

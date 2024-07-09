@@ -12,7 +12,9 @@ const updateRem = () => {
     return Breakpoints.Current.rem;
 };
 
-updateRem();
+if (typeof window !== 'undefined') {
+    updateRem();
+}
 
 export const GemContext = React.createContext(Breakpoints.Current.rem);
 export const BreakpointContext = React.createContext(Breakpoints.Current.breakpoint?.id);

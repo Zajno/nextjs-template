@@ -1,9 +1,9 @@
 'use client';
 
 import {
-    type BreakpointData as BreakpointBaseData,
+    BreakpointData as BreakpointBaseData,
     BreakpointsManager,
-    type ICurrentBreakpointInfo,
+    ICurrentBreakpointInfo,
 } from '@zajno/common-web/breakpoints';
 import { Event } from '@zajno/common/observing/event';
 
@@ -29,7 +29,6 @@ export const AppMediaQueries = {
     [BreakpointType.Tablet]: BreakpointRules.Tablet,
     [BreakpointType.Mobile]: BreakpointRules.Mobile,
 };
-
 
 const AppBreakpoints: Record<BreakpointType, BreakpointData> = {
     Desktop: {
@@ -61,7 +60,6 @@ Manager.registerBreakpoint(AppBreakpoints.Desktop);
 Manager.registerBreakpoint(AppBreakpoints.Tablet);
 Manager.registerBreakpoint(AppBreakpoints.Mobile);
 
-
 const resizeEvent = new Event<{width: number, height: number}>();
 
 const resize = () => {
@@ -72,8 +70,10 @@ const resize = () => {
     resizeEvent.trigger({ width, height });
 };
 
-resize();
-window.onresize = resize;
+if (typeof window !== 'undefined') {
+    resize();
+    window.onresize = resize;
+}
 
 // that's just a wrapper for core Breakpoints, nothing else should be added here
 export const Breakpoints = {

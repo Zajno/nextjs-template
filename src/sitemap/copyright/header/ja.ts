@@ -8,7 +8,7 @@ export const HeaderJaCopy: HeaderCopyrightShape = {
         },
         {
             title: 'だいたい',
-            href: '/about',
+            href: '/users',
         },
     ],
 };

@@ -1,6 +1,6 @@
-import type { AboutCopyrightShape } from './index';
+import type { UsersCopyrightShape } from './index';
 
-export const AboutJaCopy: AboutCopyrightShape = {
+export const UsersJaCopy: UsersCopyrightShape = {
     heroSection : {
         title: 'ABOUT',
         subtitle: 'アストロ テンプレート',

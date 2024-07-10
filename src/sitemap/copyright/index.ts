@@ -6,5 +6,5 @@ export { ModalMenuCopyright } from './modal-menu';
 
 export { HomeCopyright } from './home';
 export type { HomeCopyrightShape } from './home';
-export { AboutCopyright } from './about';
-export type { AboutCopyrightShape } from './about';
+export { UsersCopyright } from './users';
+export type { UsersCopyrightShape } from './users';

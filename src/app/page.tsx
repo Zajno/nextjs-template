@@ -8,7 +8,7 @@ const COPY = PageSettings.copy[defaultLang];
 
 export const metadata = createMetaData(PageSettings.title, PageSettings.description);
 
-export default function Home() {
+export default function Page() {
     return (
         <main>
             <HeroSection

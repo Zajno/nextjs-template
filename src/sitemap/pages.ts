@@ -1,10 +1,10 @@
-import { AboutCopyright, type AboutCopyrightShape } from './copyright';
+import { UsersCopyright, type UsersCopyrightShape } from './copyright';
 import { HomeCopyright, type HomeCopyrightShape } from './copyright';
 import { type SitePage } from './types';
 
 export enum PagesRoutes {
     Home = '/',
-    About = '/about',
+    Users = '/users',
     Error404 = '/404',
     NotSupported = '/not-supported',
     NoScript = '/no-script'
@@ -18,12 +18,12 @@ export const HomePage: SitePage<HomeCopyrightShape> = {
     copy: HomeCopyright,
 };
 
-export const AboutPage: SitePage<AboutCopyrightShape> = {
-    id: 'about',
-    href: PagesRoutes.About,
-    title: 'About Page | Zajno Digital Design Agency',
+export const UsersPage: SitePage<UsersCopyrightShape> = {
+    id: 'users',
+    href: PagesRoutes.Users,
+    title: 'Users Page | Zajno Digital Design Agency',
     description: 'Full-service digital design and development agency specializing in UX/UI design, crafting thought-out personalized experiences for web and mobile.',
-    copy: AboutCopyright,
+    copy: UsersCopyright,
 };
 
 export const Page404: SitePage = {
@@ -58,7 +58,7 @@ export const NoScriptId = NoScript.id;
 
 const pages: SitePage[] = [
     HomePage,
-    AboutPage,
+    UsersPage,
     Page404,
     NotSupported,
     NoScript,

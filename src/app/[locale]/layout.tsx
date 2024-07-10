@@ -1,5 +1,5 @@
 import { Righteous } from 'next/font/google';
-import '../styles/base.sass';
+import '@/styles/base.sass';
 import { BreakpointsContextProvider } from '@/services/breakpoints';
 import { Header } from '@/components/common/Header';
 
@@ -11,14 +11,16 @@ const righteous = Righteous({
 
 export default function RootLayout({
     children,
+    params,
 }: Readonly<{
     children: React.ReactNode;
+    params: { locale: string }
 }>) {
     return (
-        <html lang="en">
+        <html lang={params.locale}>
             <body className={righteous.variable}>
                 <BreakpointsContextProvider>
-                    <Header/>
+                    <Header locale={params.locale}/>
 
                     {children}
                 </BreakpointsContextProvider>

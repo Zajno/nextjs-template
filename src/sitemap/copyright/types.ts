@@ -4,7 +4,7 @@ export const languages = Object.freeze({
     ja: 'Japan',
 });
 
-export const defaultLang: Locales = 'en';
+export const defaultLang = Object.keys(languages)[0] as Locales;
 
 export type Locales = keyof typeof languages;
 

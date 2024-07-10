@@ -31,6 +31,10 @@ export const HeroSection = ({ id, copyright }: Props) => {
                 <h2 className="title-h2">
                     {`current breakpoint: ${breakpoint.name}`}
                 </h2>
+
+                <h2 className="title-h2">
+                    {copyright.subtitle}
+                </h2>
             </div>
         </section>
     );

@@ -3,6 +3,7 @@ import { HomePage as PageSettings } from '@/sitemap/pages';
 import { defaultLang } from '@/sitemap/copyright';
 import { createMetaData } from '@/utils/createMetadata';
 import { ImageSection } from '@/components/sections/home/imageSection';
+import { LottieSection } from '@/components/sections/home/lottieSection';
 
 const COPY = PageSettings.copy[defaultLang];
 
@@ -15,7 +16,7 @@ export default function Page() {
                 id="hero-section"
                 copyright={COPY.heroSection}
             />
-            <div style={{ width: '100vw', height: '100vh', border: '1px solid red' }}></div>
+            <LottieSection id="lottie-section" />
 
             <ImageSection id="image-section" />
         </main>
